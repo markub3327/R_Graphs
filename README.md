@@ -1,1 +1,3 @@
-# R_Graphs
+# R graphs
+
+Manipulating with graphs.
