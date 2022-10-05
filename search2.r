@@ -19,26 +19,26 @@ for (i in 1:vcount(g))
   goal = i
   myPath1 = c(goal)
   myROOT = 11
-  cat(goal, " ")
   repeat {
     goal = myBFS$father[goal]
     myPath1 = c(myPath1, goal)
     if (goal == myROOT) break
   }
-  print(rev(myPath1))
 
 
   goal = i
   myPath2 = c(goal)
   myROOT = 11
-  cat(goal, " ")
   repeat {
     goal = myDFS$father[goal]
     myPath2 = c(myPath2, goal)
     if (goal == myROOT) break
   }
-  print(rev(myPath2))
 
-  cat(i, "\n")
-  if (identical(myPath1, myPath2) == FALSE) break
+  if (identical(myPath1, myPath2) == FALSE)
+  {
+    cat(rev(myPath1), "\n")
+    cat(rev(myPath2), "\n")
+    cat(i, "\n")
+  }
 }
